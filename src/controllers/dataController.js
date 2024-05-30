@@ -14,7 +14,7 @@ const getData = async (req, res) => {
             console.log("No data found");
             return res.status(404).json({ message: "No data found" });
         }
-        console.log("Data found:", data);
+        console.log("Data found: like ", data[0]);
         res.json(data);
     } catch (error) {
         console.error("Error fetching data:", error);
