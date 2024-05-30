@@ -394,3 +394,86 @@ app.listen(PORT, () => {
 ```
 
 This way, you separate the data loading process from your server setup. The data loading script (`loadData.js`) is run once to populate your MongoDB database, and your Express server (`app.js`) serves the data via an API endpoint. This keeps your code organized and your server focused on handling API requests.
+
+
+
+
+---
+
+## Endpoint: `http://localhost:3000/api/data`
+
+### Description
+This endpoint provides data related to energy consumption projections from the United States Energy Information Administration (EIA).
+
+### Method
+GET
+
+### Response
+
+```json
+[
+  {
+    "_id": "6657fa896b6d2f08a87cbf9b",
+    "end_year": "",
+    "intensity": 6,
+    "sector": "Energy",
+    "topic": "gas",
+    "insight": "Annual Energy Outlook",
+    "url": "http://www.eia.gov/outlooks/aeo/pdf/0383(2017).pdf",
+    "region": "Northern America",
+    "start_year": "",
+    "impact": "",
+    "added": "2017-01-19T22:21:25.000Z",
+    "published": "2017-01-08T18:30:00.000Z",
+    "country": "United States of America",
+    "relevance": 2,
+    "pestle": "Industries",
+    "source": "EIA",
+    "title": "U.S. natural gas consumption is expected to increase during much of the projection period.",
+    "likelihood": 3
+  },
+  {
+    "_id": "6657faa46b6d2f08a87cbf9c",
+    "end_year": "",
+    "intensity": 6,
+    "sector": "Energy",
+    "topic": "gas",
+    "insight": "Annual Energy Outlook",
+    "url": "http://www.eia.gov/outlooks/aeo/pdf/0383(2017).pdf",
+    "region": "Northern America",
+    "start_year": "",
+    "impact": "",
+    "added": "2017-01-19T22:21:25.000Z",
+    "published": "2017-01-08T18:30:00.000Z",
+    "country": "United States of America",
+    "relevance": 2,
+    "pestle": "Industries",
+    "source": "EIA",
+    "title": "U.S. natural gas consumption is expected to increase during much of the projection period.",
+    "likelihood": 3
+  }
+]
+```
+
+### Response Fields
+- `_id` (string): The unique identifier of the data entry.
+- `end_year` (string): The end year of the projection.
+- `intensity` (number): The intensity of the insight.
+- `sector` (string): The sector related to the insight.
+- `topic` (string): The topic of the insight.
+- `insight` (string): Description of the insight.
+- `url` (string): URL to the source of the insight.
+- `region` (string): The region to which the insight applies.
+- `start_year` (string): The start year of the projection.
+- `impact` (string): The impact of the insight.
+- `added` (string): Date and time when the data entry was added.
+- `published` (string): Date and time when the insight was published.
+- `country` (string): The country to which the insight applies.
+- `relevance` (number): The relevance of the insight.
+- `pestle` (string): The PESTLE factor related to the insight.
+- `source` (string): The source of the insight.
+- `title` (string): The title of the insight.
+- `likelihood` (number): The likelihood of the insight.
+
+
+---
